@@ -56,6 +56,85 @@ const questions = () => {
                 }
             }
         },
+        {
+            type:'list',
+            name:'license',
+            message:'What licensing did you use for your project?',
+            choices: ['MIT', 'GNU', 'BSD', 'Apache'],
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your name!');
+                  return false;
+                }
+            }
+        },
+        {
+            type:'input',
+            name:'contributions',
+            message:'Please elaborate on contribution guidelines for your project.',
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your name!');
+                  return false;
+                }
+            }
+        },
+        {
+            type:'input',
+            name:'title',
+            message:'What is the title of your project?',
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your name!');
+                  return false;
+                }
+            }
+        },
+        {
+            type:'input',
+            name:'tests',
+            message:'Please enter testing instructions for your project.',
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your name!');
+                  return false;
+                }
+            }
+        },
+        {
+            type:'input',
+            name:'questions',
+            message:'Please enter your GitHub username.',
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your name!');
+                  return false;
+                }
+            }
+        },
+        {
+            type:'input',
+            name:'questions, email',
+            message:'Please enter your contact email address.',
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your name!');
+                  return false;
+                }
+            }
+        },
     ]);
 };
 // TODO: Create a function to write README file
