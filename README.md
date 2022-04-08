@@ -1,4 +1,4 @@
-# test
+# README Generator
  ## Table of Contents
  - [Description](#description)
  - [Installation](#installation)
@@ -9,18 +9,17 @@
  - [Questions](#questions)
 
  ## Description
- test
+ An application to generate a README.md file
  ## Installation
- test
+ Download the code from GitHub
  ## Usage
- test
+ Open the terminal and run node in order to use project
  ## License
- MIT
  ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
  ## Contributions
- test
+ Test
  ## Tests
- test
+ Test
  ## Questions
-  - GitHub: [test(https://github.com/test)]
-  - Email: [test](mailto:example@example.com)
+  - GitHub: [laynewegenast(https://github.com/laynewegenast)]
+  - Email: [layne.wegenast@gmail.com](mailto:example@example.com)
