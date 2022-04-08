@@ -23,3 +23,6 @@
  ## Questions
   - GitHub: [laynewegenast(https://github.com/laynewegenast)]
   - Email: [layne.wegenast@gmail.com](mailto:example@example.com)
+
+  ## Link to  walk-thru video
+  - https://drive.google.com/file/d/1j2yAZMl-t7gVe6TpgcqIjx9a3lBbQWT0/view
