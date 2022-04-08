@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+
 // TODO: Create an array of questions for user input
 const questions = () => {
     inquirer.prompt([
@@ -12,7 +14,7 @@ const questions = () => {
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your title!');
+                  console.log('Please enter your projects title!');
                   return false;
                 }
             }
@@ -38,7 +40,7 @@ const questions = () => {
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your name!');
+                  console.log('Please enter the installation steps for your project.');
                   return false;
                 }
             }
@@ -51,7 +53,7 @@ const questions = () => {
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your name!');
+                  console.log('Please provide instructions for use of your project.');
                   return false;
                 }
             }
@@ -65,7 +67,7 @@ const questions = () => {
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your name!');
+                  console.log('Please select the license used for your project.');
                   return false;
                 }
             }
@@ -85,52 +87,39 @@ const questions = () => {
         },
         {
             type:'input',
-            name:'title',
-            message:'What is the title of your project?',
-            validate: nameInput => {
-                if (nameInput) {
-                  return true;
-                } else {
-                  console.log('Please enter your name!');
-                  return false;
-                }
-            }
-        },
-        {
-            type:'input',
             name:'tests',
             message:'Please enter testing instructions for your project.',
             validate: nameInput => {
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your name!');
+                  console.log('Please enter the testing instructions for your project.');
                   return false;
                 }
             }
         },
         {
             type:'input',
-            name:'questions',
+            name:'github',
             message:'Please enter your GitHub username.',
             validate: nameInput => {
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your name!');
+                  console.log('Please enter your username!');
                   return false;
                 }
             }
         },
         {
             type:'input',
-            name:'questions, email',
+            name:'email',
             message:'Please enter your contact email address.',
             validate: nameInput => {
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your name!');
+                  console.log('Please enter your email!');
                   return false;
                 }
             }
@@ -138,10 +127,23 @@ const questions = () => {
     ]);
 };
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeToFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log('Your README file has been successfully generated');
+    });
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then(function (userInput) {
+        console.log(userInput)
+        writeToFile('README.md', generateMarkdown(userInput));
+    });
+}
 
 // Function call to initialize app
 init();
