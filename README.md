@@ -9,17 +9,17 @@
  - [Questions](#questions)
 
  ## Description
- An application to generate a README.md file
+ This is a project that will generate a README.md file after answering prompts in the terminal
  ## Installation
- Download the code from GitHub
+ Run node
  ## Usage
- Open the terminal and run node in order to use project
+ User will run node in the terminal while in the root directory of the project and answer prompts to generate README
  ## License
  ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
  ## Contributions
- Test
+ This is a test
  ## Tests
- Test
+ This is also a test
  ## Questions
   - GitHub: [laynewegenast(https://github.com/laynewegenast)]
   - Email: [layne.wegenast@gmail.com](mailto:example@example.com)
